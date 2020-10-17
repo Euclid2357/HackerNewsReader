@@ -14,6 +14,7 @@
 		CA59D8DA253A7361000D833A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA59D8D8253A7361000D833A /* LaunchScreen.storyboard */; };
 		CA59D8ED253A7B2E000D833A /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D8EC253A7B2E000D833A /* PostsViewController.swift */; };
 		CA59D8F1253A7DEA000D833A /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D8F0253A7DEA000D833A /* PostTableViewCell.swift */; };
+		CA59D8F5253A8F9D000D833A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D8F4253A8F9D000D833A /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CA59D8DB253A7361000D833A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA59D8EC253A7B2E000D833A /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		CA59D8F0253A7DEA000D833A /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		CA59D8F4253A8F9D000D833A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		CA59D8E2253A7915000D833A /* model */ = {
 			isa = PBXGroup;
 			children = (
+				CA59D8F4253A8F9D000D833A /* Post.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				CA59D8CE253A735E000D833A /* AppDelegate.swift in Sources */,
 				CA59D8D0253A735E000D833A /* SceneDelegate.swift in Sources */,
 				CA59D8F1253A7DEA000D833A /* PostTableViewCell.swift in Sources */,
+				CA59D8F5253A8F9D000D833A /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

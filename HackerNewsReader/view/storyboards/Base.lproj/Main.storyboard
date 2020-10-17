@@ -53,6 +53,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="phX-ig-y8m">
+                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HGi-o7-S53"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,6 +68,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="phX-ig-y8m" id="1NZ-d4-FJQ"/>
                         <outlet property="tableView" destination="tRZ-65-XhC" id="5E0-EC-8TB"/>
                     </connections>
                 </viewController>
