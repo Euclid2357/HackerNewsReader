@@ -53,22 +53,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="phX-ig-y8m">
-                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="BDI-Qu-LEf">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HGi-o7-S53"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="BDI-Qu-LEf" firstAttribute="centerX" secondItem="h7S-Op-2pZ" secondAttribute="centerX" id="faz-hO-oUV"/>
                             <constraint firstItem="tRZ-65-XhC" firstAttribute="leading" secondItem="HGi-o7-S53" secondAttribute="leading" id="mRa-ro-Bki"/>
                             <constraint firstItem="HGi-o7-S53" firstAttribute="trailing" secondItem="tRZ-65-XhC" secondAttribute="trailing" id="nCc-zf-cuW"/>
                             <constraint firstItem="tRZ-65-XhC" firstAttribute="top" secondItem="HGi-o7-S53" secondAttribute="top" id="npB-b7-Soq"/>
                             <constraint firstItem="HGi-o7-S53" firstAttribute="bottom" secondItem="tRZ-65-XhC" secondAttribute="bottom" id="pZS-1u-yWh"/>
+                            <constraint firstItem="BDI-Qu-LEf" firstAttribute="centerY" secondItem="h7S-Op-2pZ" secondAttribute="centerY" id="qTV-zT-Slb"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="phX-ig-y8m" id="1NZ-d4-FJQ"/>
+                        <outlet property="activityIndicator" destination="BDI-Qu-LEf" id="Btw-fc-scK"/>
                         <outlet property="tableView" destination="tRZ-65-XhC" id="5E0-EC-8TB"/>
                     </connections>
                 </viewController>

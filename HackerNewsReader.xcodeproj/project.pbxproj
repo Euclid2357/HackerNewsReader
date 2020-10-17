@@ -15,6 +15,10 @@
 		CA59D8ED253A7B2E000D833A /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D8EC253A7B2E000D833A /* PostsViewController.swift */; };
 		CA59D8F1253A7DEA000D833A /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D8F0253A7DEA000D833A /* PostTableViewCell.swift */; };
 		CA59D8F5253A8F9D000D833A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D8F4253A8F9D000D833A /* Post.swift */; };
+		CA59D8FC253AB510000D833A /* HackerNewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D8FB253AB510000D833A /* HackerNewsService.swift */; };
+		CA59D900253AB577000D833A /* HnAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D8FF253AB577000D833A /* HnAPIClient.swift */; };
+		CA59D907253AB8F2000D833A /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D906253AB8F2000D833A /* PostListViewModel.swift */; };
+		CA59D90B253AB98C000D833A /* PostCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D90A253AB98C000D833A /* PostCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		CA59D8EC253A7B2E000D833A /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		CA59D8F0253A7DEA000D833A /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		CA59D8F4253A8F9D000D833A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		CA59D8FB253AB510000D833A /* HackerNewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsService.swift; sourceTree = "<group>"; };
+		CA59D8FF253AB577000D833A /* HnAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HnAPIClient.swift; sourceTree = "<group>"; };
+		CA59D906253AB8F2000D833A /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
+		CA59D90A253AB98C000D833A /* PostCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 		CA59D8CC253A735E000D833A /* HackerNewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				CA59D8FE253AB543000D833A /* API */,
 				CA59D8E8253A797A000D833A /* service */,
 				CA59D8E7253A796D000D833A /* helper */,
 				CA59D8E6253A7954000D833A /* viewModel */,
@@ -94,6 +103,8 @@
 		CA59D8E6253A7954000D833A /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CA59D909253AB979000D833A /* cells */,
+				CA59D906253AB8F2000D833A /* PostListViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -108,6 +119,7 @@
 		CA59D8E8253A797A000D833A /* service */ = {
 			isa = PBXGroup;
 			children = (
+				CA59D8FB253AB510000D833A /* HackerNewsService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -125,6 +137,22 @@
 			isa = PBXGroup;
 			children = (
 				CA59D8F0253A7DEA000D833A /* PostTableViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		CA59D8FE253AB543000D833A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CA59D8FF253AB577000D833A /* HnAPIClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CA59D909253AB979000D833A /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				CA59D90A253AB98C000D833A /* PostCellViewModel.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -199,8 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA59D907253AB8F2000D833A /* PostListViewModel.swift in Sources */,
 				CA59D8ED253A7B2E000D833A /* PostsViewController.swift in Sources */,
+				CA59D900253AB577000D833A /* HnAPIClient.swift in Sources */,
 				CA59D8CE253A735E000D833A /* AppDelegate.swift in Sources */,
+				CA59D8FC253AB510000D833A /* HackerNewsService.swift in Sources */,
+				CA59D90B253AB98C000D833A /* PostCellViewModel.swift in Sources */,
 				CA59D8D0253A735E000D833A /* SceneDelegate.swift in Sources */,
 				CA59D8F1253A7DEA000D833A /* PostTableViewCell.swift in Sources */,
 				CA59D8F5253A8F9D000D833A /* Post.swift in Sources */,
