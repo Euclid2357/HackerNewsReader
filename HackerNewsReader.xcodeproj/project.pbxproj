@@ -13,6 +13,7 @@
 		CA59D8D7253A7361000D833A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA59D8D6253A7361000D833A /* Assets.xcassets */; };
 		CA59D8DA253A7361000D833A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA59D8D8253A7361000D833A /* LaunchScreen.storyboard */; };
 		CA59D8ED253A7B2E000D833A /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D8EC253A7B2E000D833A /* PostsViewController.swift */; };
+		CA59D8F1253A7DEA000D833A /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D8F0253A7DEA000D833A /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CA59D8D9253A7361000D833A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA59D8DB253A7361000D833A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA59D8EC253A7B2E000D833A /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		CA59D8F0253A7DEA000D833A /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		CA59D8E4253A7939000D833A /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CA59D8EF253A7DCD000D833A /* cells */,
 				CA59D8EA253A79C9000D833A /* storyboards */,
 				CA59D8EC253A7B2E000D833A /* PostsViewController.swift */,
 			);
@@ -113,6 +116,14 @@
 				CA59D8D8253A7361000D833A /* LaunchScreen.storyboard */,
 			);
 			path = storyboards;
+			sourceTree = "<group>";
+		};
+		CA59D8EF253A7DCD000D833A /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				CA59D8F0253A7DEA000D833A /* PostTableViewCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				CA59D8ED253A7B2E000D833A /* PostsViewController.swift in Sources */,
 				CA59D8CE253A735E000D833A /* AppDelegate.swift in Sources */,
 				CA59D8D0253A735E000D833A /* SceneDelegate.swift in Sources */,
+				CA59D8F1253A7DEA000D833A /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

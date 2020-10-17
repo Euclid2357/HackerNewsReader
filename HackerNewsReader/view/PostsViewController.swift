@@ -8,13 +8,29 @@
 import UIKit
 
 class PostsViewController: UIViewController {
+    
+    // MARK: - Outlets
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Properties
+    
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.initViewModel()
+        
     }
     
+    // MARK: - Helpers
+    
+    private func initViewModel() {
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -26,4 +42,20 @@ class PostsViewController: UIViewController {
     }
     */
 
+}
+
+extension PostsViewController: UITableViewDelegate {
+    
+}
+
+extension PostsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    
 }

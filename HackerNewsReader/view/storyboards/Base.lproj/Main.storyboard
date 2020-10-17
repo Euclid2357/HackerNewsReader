@@ -19,6 +19,39 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tRZ-65-XhC">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="KAz-pm-hQq" customClass="PostTableViewCell" customModule="HackerNewsReader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KAz-pm-hQq" id="PZj-3g-Xwz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giy-bu-qaQ">
+                                                    <rect key="frame" x="20" y="20" width="374" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiF-dR-Iw7">
+                                                    <rect key="frame" x="20" y="51" width="374" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="giy-bu-qaQ" firstAttribute="top" secondItem="PZj-3g-Xwz" secondAttribute="top" constant="20" symbolic="YES" id="246-Yo-05u"/>
+                                                <constraint firstItem="CiF-dR-Iw7" firstAttribute="top" secondItem="giy-bu-qaQ" secondAttribute="bottom" constant="8" symbolic="YES" id="DMo-sd-jdH"/>
+                                                <constraint firstItem="giy-bu-qaQ" firstAttribute="leading" secondItem="PZj-3g-Xwz" secondAttribute="leading" constant="20" symbolic="YES" id="Dtp-n2-ctt"/>
+                                                <constraint firstAttribute="trailing" secondItem="giy-bu-qaQ" secondAttribute="trailing" constant="20" symbolic="YES" id="X47-bu-xqY"/>
+                                                <constraint firstAttribute="trailing" secondItem="CiF-dR-Iw7" secondAttribute="trailing" constant="20" symbolic="YES" id="aGj-7f-24A"/>
+                                                <constraint firstItem="CiF-dR-Iw7" firstAttribute="leading" secondItem="PZj-3g-Xwz" secondAttribute="leading" constant="20" symbolic="YES" id="bqI-4f-Tx0"/>
+                                                <constraint firstAttribute="bottom" secondItem="CiF-dR-Iw7" secondAttribute="bottom" constant="20" symbolic="YES" id="gtD-BE-pxX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HGi-o7-S53"/>
@@ -30,13 +63,19 @@
                             <constraint firstItem="HGi-o7-S53" firstAttribute="bottom" secondItem="tRZ-65-XhC" secondAttribute="bottom" id="pZS-1u-yWh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="tRZ-65-XhC" id="5E0-EC-8TB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXQ-xr-Ql5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="102"/>
+            <point key="canvasLocation" x="-7.2463768115942031" y="101.78571428571428"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
