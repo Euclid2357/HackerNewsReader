@@ -14,7 +14,7 @@ class PostListViewModel {
     private var cellViewModels: [PostCellViewModel] = [PostCellViewModel]() {
         didSet {
             cellViewModels.sort { (a, b) -> Bool in
-                a.post.createdAtI <= b.post.createdAtI
+                a.post.createdAtI >= b.post.createdAtI
             }
             self.reloadTableViewClosure?()
         }
