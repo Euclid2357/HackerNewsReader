@@ -48,6 +48,7 @@ class PostListViewModel {
     var reloadTableViewClosure: (()->())?
     var showAlertClosure: (()->())?
     var updateLoadingStatusClosure: (()->())?
+    var didTapClosure: (()->())?
 
 
 
@@ -89,5 +90,6 @@ class PostListViewModel {
     
     func didTap( at indexPath: IndexPath ){
         self.selectedCellViewModel = self.cellViewModel(at: indexPath)
+        self.didTapClosure?()
     }
 }

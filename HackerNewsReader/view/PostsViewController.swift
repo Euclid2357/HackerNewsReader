@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class PostsViewController: UIViewController {
     
@@ -67,6 +68,16 @@ class PostsViewController: UIViewController {
             }
         }
         
+        viewModel.didTapClosure = { [weak self] () in
+            if let selectedVM = self?.viewModel.selectedCellViewModel, let url = selectedVM.url {
+                DispatchQueue.main.async {
+                    let safariVC = SFSafariViewController(url: url)
+                    self?.present(safariVC, animated: true, completion: nil)
+                }
+                
+            }
+        }
+        
         viewModel.updateLoadingStatusClosure = { [weak self] () in
                     DispatchQueue.main.async {
                         let loading = self?.viewModel.isLoading ?? false
@@ -88,7 +99,7 @@ class PostsViewController: UIViewController {
         viewModel.initFetch(completionHandler: nil)
     }
 
-    /*
+   
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -96,11 +107,15 @@ class PostsViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
 
 extension PostsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.viewModel.didTap(at: indexPath)
+    }
     
 }
 
