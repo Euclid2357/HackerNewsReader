@@ -18,6 +18,7 @@ class PostsViewController: UIViewController {
     lazy var viewModel: PostListViewModel = {
         return PostListViewModel()
     }()
+    var refreshControl = UIRefreshControl()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -25,8 +26,21 @@ class PostsViewController: UIViewController {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl) // not required when using UITableViewController
         self.initViewModel()
+        refreshControl.attributedTitle = NSAttributedString(string: viewModel.refreshTitle)
         
+    }
+    
+    // MARK: - Actions
+    @objc func refresh(_ sender: AnyObject) {
+       // Code to refresh table view
+        viewModel.initFetch {
+            DispatchQueue.main.async {
+                self.refreshControl.endRefreshing()
+            }
+        }
     }
     
     // MARK: - Helpers

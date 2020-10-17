@@ -11,6 +11,7 @@ class PostListViewModel {
 
     private let hnService: HackerNewsService
     var title = "Posts"
+    var refreshTitle = "Pull to refresh"
     private var cellViewModels: [PostCellViewModel] = [PostCellViewModel]() {
         didSet {
             cellViewModels.sort { (a, b) -> Bool in
