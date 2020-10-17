@@ -92,4 +92,7 @@ class PostListViewModel {
         self.selectedCellViewModel = self.cellViewModel(at: indexPath)
         self.didTapClosure?()
     }
+    func remove(at index: Int) {
+        self.cellViewModels.remove(at: index)
+    }
 }
