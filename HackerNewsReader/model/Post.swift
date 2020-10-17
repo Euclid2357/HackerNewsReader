@@ -28,4 +28,7 @@ struct Post: Codable {
 
 struct HNResults: Codable {
     var posts: [Post]
+    enum CodingKeys: String, CodingKey {
+        case posts = "hits"
+    }
 }

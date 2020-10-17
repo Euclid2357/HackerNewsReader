@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HackerNewsService {
-    func fetchPosts( complete: @escaping ( _ success: Bool, _ contacts: [Post], _ error: Error? )->() )
+    func fetchPosts( complete: @escaping ( _ success: Bool, _ posts: [Post], _ error: Error? )->() )
 }

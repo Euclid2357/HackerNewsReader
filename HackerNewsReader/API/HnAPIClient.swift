@@ -17,8 +17,11 @@ class HnAPIClient: HackerNewsService {
                 let dataTask = URLSession.shared.dataTask(with: postsURL, completionHandler: { (data, response, error) in
                     if let responseData = data {
                         let jsonDecoder = JSONDecoder()
-                        if let results = try? jsonDecoder.decode(HNResults.self, from: responseData) {
-                            complete(true, results.posts, nil)
+                        do {
+                            let results = try jsonDecoder.decode(HNResults.self, from: responseData)
+                               complete(true, results.posts, nil)
+                        } catch  {
+                            print(error.localizedDescription)
                         }
                     }
             })

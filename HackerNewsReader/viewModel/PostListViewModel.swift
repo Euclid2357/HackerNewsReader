@@ -21,11 +21,7 @@ class PostListViewModel {
 //            cellModel1.nameText <= cellModel2.nameText
 //        }
 //    }
-//    private var favoriteCellViewModels: [ContactCellViewModel] {
-//        return sortedCellModels.filter {
-//            $0.isFavorite
-//        }
-//    }
+
     
     var messageToDisplay: String? {
         didSet {
@@ -37,8 +33,9 @@ class PostListViewModel {
             self.updateLoadingStatusClosure?()
         }
     }
-    var numberOfSections: Int {
-        return 1
+
+    var numberOfRows: Int {
+        return cellViewModels.count
     }
 
     var selectedCellViewModel: PostCellViewModel?
@@ -55,13 +52,13 @@ class PostListViewModel {
     }
     func initFetch(completionHandler: (() ->())?) {
         self.isLoading = true
-        self.hnService.fetchPosts{ [weak self] (success, contacts, error) in
+        self.hnService.fetchPosts{ [weak self] (success, posts, error) in
             self?.isLoading = false
             if let error = error {
                 print(error)
                 self?.messageToDisplay = error.localizedDescription
             } else {
-                self?.createdCellViewModels(from: contacts)
+                self?.createdCellViewModels(from: posts)
             }
             completionHandler?()
         }
@@ -75,8 +72,7 @@ class PostListViewModel {
 
     
     func createCellViewModel(from post: Post ) -> PostCellViewModel {
-
-        return PostCellViewModel()
+        return PostCellViewModel(post: post)
     }
     
     private func createdCellViewModels(from posts: [Post] ) {
