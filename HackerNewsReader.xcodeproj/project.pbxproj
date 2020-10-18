@@ -19,6 +19,8 @@
 		CA59D900253AB577000D833A /* HnAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D8FF253AB577000D833A /* HnAPIClient.swift */; };
 		CA59D907253AB8F2000D833A /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D906253AB8F2000D833A /* PostListViewModel.swift */; };
 		CA59D90B253AB98C000D833A /* PostCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D90A253AB98C000D833A /* PostCellViewModel.swift */; };
+		CA59D90F253C0070000D833A /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D90E253C006F000D833A /* PersistenceService.swift */; };
+		CA59D913253C0357000D833A /* FilePersitence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D912253C0357000D833A /* FilePersitence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		CA59D8FF253AB577000D833A /* HnAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HnAPIClient.swift; sourceTree = "<group>"; };
 		CA59D906253AB8F2000D833A /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		CA59D90A253AB98C000D833A /* PostCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellViewModel.swift; sourceTree = "<group>"; };
+		CA59D90E253C006F000D833A /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		CA59D912253C0357000D833A /* FilePersitence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePersitence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		CA59D8CC253A735E000D833A /* HackerNewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				CA59D911253C02DF000D833A /* FilePersistence */,
 				CA59D8FE253AB543000D833A /* API */,
 				CA59D8E8253A797A000D833A /* service */,
 				CA59D8E7253A796D000D833A /* helper */,
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				CA59D8FB253AB510000D833A /* HackerNewsService.swift */,
+				CA59D90E253C006F000D833A /* PersistenceService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -155,6 +161,14 @@
 				CA59D90A253AB98C000D833A /* PostCellViewModel.swift */,
 			);
 			path = cells;
+			sourceTree = "<group>";
+		};
+		CA59D911253C02DF000D833A /* FilePersistence */ = {
+			isa = PBXGroup;
+			children = (
+				CA59D912253C0357000D833A /* FilePersitence.swift */,
+			);
+			path = FilePersistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,11 +241,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA59D913253C0357000D833A /* FilePersitence.swift in Sources */,
 				CA59D907253AB8F2000D833A /* PostListViewModel.swift in Sources */,
 				CA59D8ED253A7B2E000D833A /* PostsViewController.swift in Sources */,
 				CA59D900253AB577000D833A /* HnAPIClient.swift in Sources */,
 				CA59D8CE253A735E000D833A /* AppDelegate.swift in Sources */,
 				CA59D8FC253AB510000D833A /* HackerNewsService.swift in Sources */,
+				CA59D90F253C0070000D833A /* PersistenceService.swift in Sources */,
 				CA59D90B253AB98C000D833A /* PostCellViewModel.swift in Sources */,
 				CA59D8D0253A735E000D833A /* SceneDelegate.swift in Sources */,
 				CA59D8F1253A7DEA000D833A /* PostTableViewCell.swift in Sources */,

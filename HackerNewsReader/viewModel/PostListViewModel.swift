@@ -8,7 +8,6 @@
 import Foundation
 
 class PostListViewModel {
-
     private let hnService: HackerNewsService
     var title = "Posts"
     var refreshTitle = "Pull to refresh"
@@ -20,6 +19,7 @@ class PostListViewModel {
             self.reloadTableViewClosure?()
         }
     }
+    private var removedIds = [String]()
 //    private var sortedCellModels: [PostCellViewModel]  {
 //        return self.cellViewModels.sorted { (cellModel1, cellModel2) -> Bool in
 //            cellModel1.nameText <= cellModel2.nameText
@@ -83,7 +83,10 @@ class PostListViewModel {
     private func createdCellViewModels(from posts: [Post] ) {
         var cellVMs = [PostCellViewModel]()
         for post in posts {
-            cellVMs.append( createCellViewModel(from: post) )
+            if !removedIds.contains(post.objectID) {
+                cellVMs.append( createCellViewModel(from: post))
+            }
+            
         }
         self.cellViewModels = cellVMs
     }
@@ -93,6 +96,6 @@ class PostListViewModel {
         self.didTapClosure?()
     }
     func remove(at index: Int) {
-        self.cellViewModels.remove(at: index)
+        self.removedIds.append(self.cellViewModels.remove(at: index).post.objectID)
     }
 }
