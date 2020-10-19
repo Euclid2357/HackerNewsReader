@@ -77,7 +77,6 @@
 				CA59D911253C02DF000D833A /* FilePersistence */,
 				CA59D8FE253AB543000D833A /* API */,
 				CA59D8E8253A797A000D833A /* service */,
-				CA59D8E7253A796D000D833A /* helper */,
 				CA59D8E6253A7954000D833A /* viewModel */,
 				CA59D8E4253A7939000D833A /* view */,
 				CA59D8E2253A7915000D833A /* model */,
@@ -114,13 +113,6 @@
 				CA59D906253AB8F2000D833A /* PostListViewModel.swift */,
 			);
 			path = viewModel;
-			sourceTree = "<group>";
-		};
-		CA59D8E7253A796D000D833A /* helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = helper;
 			sourceTree = "<group>";
 		};
 		CA59D8E8253A797A000D833A /* service */ = {
