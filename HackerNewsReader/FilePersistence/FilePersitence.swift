@@ -9,21 +9,17 @@ import Foundation
 class FilePersistence: PersistenceService {
     static var shared = FilePersistence()
     
-    private var removedItemsURL: URL {
+    private var offlineCacheURL: URL {
         let docsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        return docsUrl.appendingPathExtension("removed")
-    }
-    var removedList: [String] {
-        if let array = NSArray(contentsOf: removedItemsURL) {
-            return array as? [String] ?? [String]()
-        }
-        return [String]()
+        return docsUrl.appendingPathComponent("jsonCache")
     }
 
-    func markAsRemoved(post: Post) {
-        var removedIds = [String](removedList)
-        removedIds.append(post.objectID)
-        try? (removedIds as NSArray) .write(to: removedItemsURL)
+    func saveCache(jsonData: Data) {
+        try? jsonData.write(to: offlineCacheURL, options: .atomic)
+    }
+    func loadCache() -> Data? {
+        let answer = try? Data(contentsOf: offlineCacheURL, options: [])
+        return answer
     }
     
     

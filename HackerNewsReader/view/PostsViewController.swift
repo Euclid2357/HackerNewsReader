@@ -7,6 +7,7 @@
 
 import UIKit
 import SafariServices
+import Network
 
 class PostsViewController: UIViewController {
     
@@ -20,18 +21,24 @@ class PostsViewController: UIViewController {
         return PostListViewModel()
     }()
     var refreshControl = UIRefreshControl()
+    let monitor = NWPathMonitor()
+    var hasInternetConnection = true
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         tableView.addSubview(refreshControl) // not required when using UITableViewController
         self.initViewModel()
         refreshControl.attributedTitle = NSAttributedString(string: viewModel.refreshTitle)
-        
+        monitor.pathUpdateHandler = { path in
+            self.viewModel.hnService = path.status == .satisfied ? HnAPIClient.shared : CacheClient.shared
+            self.viewModel.initFetch(completionHandler: nil)
+        }
+        let queue = DispatchQueue(label: "Monitor")
+        monitor.start(queue: queue)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -120,8 +127,6 @@ class PostsViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    
-
 }
 
 extension PostsViewController: UITableViewDelegate {
@@ -152,6 +157,4 @@ extension PostsViewController: UITableViewDataSource {
         }
         return cell
     }
-    
-    
 }

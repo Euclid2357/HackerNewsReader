@@ -21,6 +21,7 @@
 		CA59D90B253AB98C000D833A /* PostCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D90A253AB98C000D833A /* PostCellViewModel.swift */; };
 		CA59D90F253C0070000D833A /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D90E253C006F000D833A /* PersistenceService.swift */; };
 		CA59D913253C0357000D833A /* FilePersitence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D912253C0357000D833A /* FilePersitence.swift */; };
+		CA59D917253D21D7000D833A /* CacheClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA59D916253D21D6000D833A /* CacheClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CA59D90A253AB98C000D833A /* PostCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellViewModel.swift; sourceTree = "<group>"; };
 		CA59D90E253C006F000D833A /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		CA59D912253C0357000D833A /* FilePersitence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePersitence.swift; sourceTree = "<group>"; };
+		CA59D916253D21D6000D833A /* CacheClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				CA59D8FB253AB510000D833A /* HackerNewsService.swift */,
 				CA59D90E253C006F000D833A /* PersistenceService.swift */,
+				CA59D916253D21D6000D833A /* CacheClient.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				CA59D913253C0357000D833A /* FilePersitence.swift in Sources */,
 				CA59D907253AB8F2000D833A /* PostListViewModel.swift in Sources */,
 				CA59D8ED253A7B2E000D833A /* PostsViewController.swift in Sources */,
+				CA59D917253D21D7000D833A /* CacheClient.swift in Sources */,
 				CA59D900253AB577000D833A /* HnAPIClient.swift in Sources */,
 				CA59D8CE253A735E000D833A /* AppDelegate.swift in Sources */,
 				CA59D8FC253AB510000D833A /* HackerNewsService.swift in Sources */,

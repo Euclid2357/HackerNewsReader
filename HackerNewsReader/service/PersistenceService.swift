@@ -7,5 +7,4 @@
 
 import Foundation
 protocol PersistenceService {
-    func markAsRemoved(post: Post)
 }

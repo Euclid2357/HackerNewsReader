@@ -8,7 +8,7 @@
 import Foundation
 
 class PostListViewModel {
-    private let hnService: HackerNewsService
+    var hnService: HackerNewsService
     var title = "Posts"
     var refreshTitle = "Pull to refresh"
     private var cellViewModels: [PostCellViewModel] = [PostCellViewModel]() {
@@ -52,7 +52,7 @@ class PostListViewModel {
 
 
 
-    init( hnService: HackerNewsService = HnAPIClient()) {
+    init( hnService: HackerNewsService = HnAPIClient.shared) {
         self.hnService  = hnService
     }
     func initFetch(completionHandler: (() ->())?) {
